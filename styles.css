@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f1f4ff;
+  padding: 1.5 rem;
+}
+
+
+/*
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  <!--style header-->
+  .header {
+    padding: 80px;
+    text-align: center;
+    background: #021C64;
+    color: #ddd;
+  }
+  
+  <!--Increase header-->
+  .header h1 {
+    font-size: 40px;
+  }
+  
+  <!--Style navigation bar-->
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  <!--Navigation bar links-->
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  <!--Top right link-->
+  .navbar a.right {
+    float: right;
+  }
+  
+  <!--Change color on hover-->
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+*/
