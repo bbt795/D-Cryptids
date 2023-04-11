@@ -224,6 +224,7 @@ label {
 
 button {
   border-radius: 0;
+ 
 }
 
 button:focus {
@@ -245,6 +246,10 @@ textarea {
 button,
 input {
   overflow: visible;
+}
+
+button:hover{
+  opacity: 0.8;
 }
 
 button,

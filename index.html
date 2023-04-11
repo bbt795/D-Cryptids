@@ -6,7 +6,6 @@
     <br><br>
 
     <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
@@ -16,28 +15,38 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>Password Checker</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
 
   </head>
 
   <body>
-    <div class="header">
+    <script src="checkPassword.js"></script>
+
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a class="navbar-brand" href="index.html">D-Cryptids</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <br>
+    <div id="passHeader">
       <h1>Password Checker and Manager</h1>
       <p>Created by DCryptids</p>
     </div>
 
-    <!--div class="navbar">
-      <a href="#" class="right">Log In</a>
-      <a href="#" class="right">Sign Up</a>
-    </div-->
-    <br><br>
-    <p>Password Checker</p>
-    <input type="text" id="Password">
-    <button id="checkPass">Check Password Strength</button>
+    <br>
+    <div id="passChecker">
+      <label for="password">Please enter your password:</label>
+      <input type="text" id="password" name="password"/>
+      <br>
+      <input type="submit" value="Submit" onclick="onClick();">
+    </div>
+  </form>
     
-    <!--p id="info"></p-->
   </body>
-  
- <!-- script src="./renderer.js"></script-->
-  <script src = "js/script.js"></script>
+
 </html>

@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-	
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
@@ -12,25 +11,41 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>Password Checker</title>
-    <link rel="stylesheet" href="css/styles.css" />
-	<link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap.css"/>
+
+    <script defer src = "loginPage.js"></script>
 
   </head>
 
   <body>
-	<header>
+
+    <header>
 		<nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a class="navbar-brand" href="index.html">D-Cryptids</a>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
 				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
 			</ul>
 		</nav>
 	</header>
+
+    <br><br><br>
+
+    <main id="main-holder">
+      <h1 id="login-header">Log In</h1>
+      
+      <div id="login-error-msg-holder">
+        <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+      </div>
+      
+      <form id="login-form">
+        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+        <input type="submit" value="Login" id="login-form-submit">
+      </form>
     
-    <br><br>
-    <h1 id="title">Log In</h1>
+    </main>
+
   </body>
   
- <!-- script src="./renderer.js"></script-->
-  <script src = "js/main.js"></script>
 </html>

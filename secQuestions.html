@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <br><br>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Security Questions</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <script defer src = "loginPage.js"></script>
+
+  </head>
+
+  <body>
+    <header>
+		<nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a class="navbar-brand" href="index.html">D-Cryptids</a>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <br><br><br>
+    
+
+    <main id="main-holder">
+        <h1 id="login-header">Security Questions</h1>
+       
+        <form id="login-form">
+          <label>What is your favorite color?</label>
+          <input type="text" name="ques1" id="ques1" class="login-form-field">
+          <br>
+          <label>What is your mother's maiden name?</label>
+          <input type="text" name="ques2" id="ques2" class="login-form-field">
+          <br>
+          <label>What is the name of your first pet?</label>  
+          <input type="text" name="ques3" id="ques3" class="login-form-field">
+          <br>
+          <input type="submit" value="Submit" id="login-form-submit" onclick="quesFunction()">
+        </form>
+      
+      </main>
+
+  </body>
+
+</html>
