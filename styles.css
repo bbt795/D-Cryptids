@@ -6,8 +6,11 @@
 }
 
 body {
-  background-color: #f1f4ff;
   padding: 1.5 rem;
+
+  background: center/70% url("background.png") fixed;
+  background-repeat: repeat-x ;
+  color: white;
 }
 
 html {
@@ -21,12 +24,14 @@ html {
   display: grid;
   justify-items: center;
   align-items: center;
+  color: white;
 }
 
 #passHeader {
   display: grid;
   justify-items: center;
   align-items: center;
+  color: white; 
 }
 
 
@@ -36,8 +41,11 @@ html {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: white;
+  
+}
 
+#login-header {
+  color: white; 
 }
 
 #login-error-msg-holder {
@@ -70,6 +78,7 @@ html {
   display: grid;
   justify-items: center;
   align-items: center;
+  color: white;
 }
 
 .login-form-field::placeholder {
@@ -118,4 +127,48 @@ html {
 }
 
 
+/*For the password manager page*/
+
+.passAccount1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-items: left;
+  align-items: left;
+  color: white;
+}
+
+.passAccount2 {
+  display: grid;
+  justify-items: left;
+  align-items: left;
+  color: white;
+}
+
+.passAccount3 {
+  display: grid;
+  justify-items: left;
+  align-items: left;
+  color: white;
+}
+
+.passAccount4 {
+  display: grid;
+  justify-items: left;
+  align-items: left;
+  color: white;
+}
+
+#passResponse {
+  display: grid;
+  position: fixed;
+  bottom: 8;
+  right: 0;
+  width: 350px;
+  padding: 10px;
+  border: 5px solid rgb(37, 87, 41);
+  margin: 40;
+  color: white;
+
+}
 

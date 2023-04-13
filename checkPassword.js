@@ -1,6 +1,4 @@
 
-//javascript code to check password strength
-
 function printStrongNess(input_string) {
     const n = input_string.length;
     // Checking lower alphabet in string
@@ -8,6 +6,7 @@ function printStrongNess(input_string) {
     let hasUpper = false;
     let hasDigit = false;
     let specialChar = false;
+    let passLength = false;
     const normalChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ";
     
     for (let i = 0; i < n; i++) {
@@ -23,6 +22,9 @@ function printStrongNess(input_string) {
         if (!normalChars.includes(input_string[i])) {
         specialChar = true;
         }
+      if (n >= 8){
+        passLength = true;
+      }
     }
     
     // Strength of password
@@ -34,22 +36,24 @@ function printStrongNess(input_string) {
         strength = "Moderate";
     }
     
-    console.log(`Strength of password: ${strength}`);
+    document.getElementById("response").innerText = 'Strength of password: ' + strength;
     
       //Ways to improve password
-      if(!hasLower || !hasUpper || !hasDigit || !specialChar){
-        console.log("Password needs: ");
+      if(!hasLower || !hasUpper || !hasDigit || !specialChar || !passLength){
         if(!hasLower){
-          console.log("Needs at least 1 lower-case letter");
+          document.getElementById("response").innerText += '\nNeeds at least 1 lower-case letter';
         }
         if(!hasUpper){
-          console.log("Needs at least 1 upper-case letter");
+          document.getElementById("response").innerText += '\nNeeds at least 1 upper-case letter';
         }
         if(!hasDigit){
-          console.log("Needs at least 1 number");
+          document.getElementById("response").innerText += '\nNeeds at least 1 number';
         }
         if(!specialChar){
-          console.log("Needs at least 1 special character");
+          document.getElementById("response").innerText += '\nNeeds at least 1 special character';
+        }
+        if(!passLength){
+          document.getElementById("response").innerText += '\nPassword should be at least 8 characters long';
         }
       }
       
@@ -119,9 +123,9 @@ function printStrongNess(input_string) {
     to check strongness and if input String is not
     strong, it will suggest*/
     function generate_password(n, p) {
-        // flag for lower case, upper case, special
-        // characters and need of more characters
-        let l = 0, u = 0, d = 0, s = 0, need = 0;
+        // flag for lower case, upper case, digits, special characters, 
+        //needs more characters, and length of password
+        let l = 0, u = 0, d = 0, s = 0, need = 0, r = 0;
         let suggest;
     
         for (let i = 0; i < n; i++) {
@@ -134,14 +138,16 @@ function printStrongNess(input_string) {
             } else {
                 s = 1;
             }
+        if(n >= 8){
+          r = 1;
+        }
         }
         // Check if input String is strong that
         // means all flag are active.
-        if ((l + u + d + s) === 4) {
-            console.log("Your Password is Strong");
-            return;
+        if ((l + u + d + s + r) == 5) {
+            return ""; //no suggestions if strong password
         } else {
-            console.log("Suggested password");
+        document.getElementById("response").innerText += '\n\nSuggested passwords:';
         }
         // Generate some 10 random suggestions which are strong
         for (let i = 0; i < 10; i++) {
@@ -150,7 +156,7 @@ function printStrongNess(input_string) {
             if (need > 0) {
                 suggest = add_more_char(suggest, need);
             }
-            console.log(suggest);
+        document.getElementById("response").innerText += '\n' + suggest;
         }
     }
     
@@ -161,4 +167,28 @@ function printStrongNess(input_string) {
       generate_password(input_String.length, input_String); 
       document.getElementById("password").value = "";
     }
+
+
+//for the password manager page
+function onClick2() {
+    const input_String = "password123";
+    printStrongNess(input_String);
+}
+
+function onClick3() {
+    const input_String = "bf42";
+    printStrongNess(input_String);
+}
+
+function onClick4() {
+    const input_String = "MX42chu$";
+    printStrongNess(input_String);
+}
+
+function onClick5() {
+    const input_String = "NJ07060";
+    printStrongNess(input_String);
+}
+
+
     
