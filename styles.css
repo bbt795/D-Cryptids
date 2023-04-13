@@ -8,7 +8,7 @@
 body {
   padding: 1.5 rem;
 
-  background: center/70% url("background.png") fixed;
+  background: center/70% url("../img/background.png") fixed;
   background-repeat: repeat-x ;
   color: white;
 }
@@ -133,29 +133,29 @@ html {
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
-  justify-items: left;
-  align-items: left;
+  justify-items: center;
+  align-items: center;
   color: white;
 }
 
 .passAccount2 {
   display: grid;
-  justify-items: left;
-  align-items: left;
+  justify-items: center;
+  align-items: center;
   color: white;
 }
 
 .passAccount3 {
   display: grid;
-  justify-items: left;
-  align-items: left;
+  justify-items: center;
+  align-items: center;
   color: white;
 }
 
 .passAccount4 {
   display: grid;
-  justify-items: left;
-  align-items: left;
+  justify-items: center;
+  align-items: center;
   color: white;
 }
 
@@ -169,6 +169,13 @@ html {
   border: 5px solid rgb(37, 87, 41);
   margin: 40;
   color: white;
+
+}
+
+.logo {
+
+  width: 300px;
+  padding-right: 15px;
 
 }
 

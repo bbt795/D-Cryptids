@@ -2,6 +2,7 @@
 function printStrongNess(input_string) {
     const n = input_string.length;
     // Checking lower alphabet in string
+	document.getElementById("response").innerText = ' ';
     let hasLower = false;
     let hasUpper = false;
     let hasDigit = false;
@@ -36,7 +37,7 @@ function printStrongNess(input_string) {
         strength = "Moderate";
     }
     
-    document.getElementById("response").innerText = 'Strength of password: ' + strength;
+    document.getElementById("responsehead").innerText = 'Strength of password: ' + strength;
     
       //Ways to improve password
       if(!hasLower || !hasUpper || !hasDigit || !specialChar || !passLength){
@@ -147,7 +148,7 @@ function printStrongNess(input_string) {
         if ((l + u + d + s + r) == 5) {
             return ""; //no suggestions if strong password
         } else {
-        document.getElementById("response").innerText += '\n\nSuggested passwords:';
+        document.getElementById("suggestedhead").innerText += 'Suggested passwords:';
         }
         // Generate some 10 random suggestions which are strong
         for (let i = 0; i < 10; i++) {
@@ -156,7 +157,7 @@ function printStrongNess(input_string) {
             if (need > 0) {
                 suggest = add_more_char(suggest, need);
             }
-        document.getElementById("response").innerText += '\n' + suggest;
+        document.getElementById("suggested").innerText += suggest + '\n';
         }
     }
     
