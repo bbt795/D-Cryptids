@@ -15,18 +15,18 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>Password Checker</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
   </head>
 
   <body>
-    <script src="checkPassword.js"></script>
+    <script src="js/checkPassword.js"></script>
 
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a class="navbar-brand" href="index.html">D-Cryptids</a>
+      <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"><a href="index.html"><img class="logo" src="img/DCryptids_logo.png"></img></a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-justified nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
         </ul>
       </nav>
@@ -45,7 +45,21 @@
       <br>
       <input type="submit" value="Submit" onclick="onClick();">
       <br>
-      <p id="response"></p>
+		<div class="row">
+			<div class="card col-lg-4">
+				<div class="card-body">
+					<h5 class="card-title" id="responsehead"></h5>
+					<p class="card-text" id="response"></p>
+				</div>
+			</div>
+			<div class="card col-md-4"></div>
+			<div class="card col-lg-4">
+				<div class="card-body">
+					<h5 class="card-title" id="suggestedhead"></h5>
+					<p class="card-text" id="suggested"></p>
+				</div>
+			</div>
+		</div>
     </div>
   </form>
     

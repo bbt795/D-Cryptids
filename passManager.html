@@ -13,15 +13,15 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>Password Manager</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
     
   </head>
-  <script src="checkPassword.js"></script>
+  <script src="js/checkPassword.js"></script>
 
   <body>
     <header>
-		<nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a class="navbar-brand" href="index.html">D-Cryptids</a>
+		<nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark"> <a href="index.html"><img class="logo" src="img/DCryptids_logo.png"></img></a>
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
@@ -38,37 +38,44 @@
 
   <div id="container">
     <div id="passResponse">
+	  <h5 id="responsehead"></h5>
       <p id="response"></p>
     </div>
 
-    <div class="passAccount1">
-      <h2>Amazon</h2>
-      <p>Username: mothma****</p>
-      <p>Password: ***********</p>
+    <div class="passAccount1 card-body">
+      <h2 class="card-title">Amazon</h2>
+      <p class="card-text">Username: mothma****</p>
+      <p class="card-text">Password: ***********</p>
       <input type="submit" value="Check Password Strength" onclick="onClick2();">
       <br>
     </div>
 
-    <div class="passAccount2">
-      <h2>Google</h2>
-      <p>Username: bigf****</p>
-      <p>Password: ****</p>
+	<br>
+
+    <div class="passAccount2 card-body">
+      <h2 class="card-title">Google</h2>
+      <p class="card-text">Username: bigf****</p>
+      <p class="card-text">Password: ****</p>
       <input type="submit" value="Check Password Strength" onclick="onClick3();">
       <br>
     </div>
+	
+	<br>
 
-    <div class="passAccount3">
-      <h2>Twitter</h2>
-      <p>Username: chuupaacaa****</p>
-      <p>Password: ********</p>
+    <div class="passAccount3 card-body">
+      <h2 class="card-title">Twitter</h2>
+      <p class="card-text">Username: chuupaacaa****</p>
+      <p class="card-text">Password: ********</p>
       <input type="submit" value="Check Password Strength" onclick="onClick4();">
       <br>
     </div>
 
-    <div class="passAccount4">
-      <h2>Instagram</h2>
-      <p>Username: 66jerseydev****</p>
-      <p>Password: *******</p>
+	<br>
+
+    <div class="passAccount4 card-body">
+      <h2 class="card-title">Instagram</h2>
+      <p class="card-text">Username: 66jerseydev****</p>
+      <p class="card-text">Password: *******</p>
       <input type="submit" value="Check Password Strength" onclick="onClick5();">
       <br>
     </div>
