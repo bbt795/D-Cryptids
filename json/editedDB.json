@@ -1,0 +1,58 @@
+{
+"db" : [
+    {
+        "identity": 14,
+        "labels": [
+            "Password"
+        ],
+        "properties": "notAPassword",
+        "elementId": "14"
+    }, 
+
+    {
+        "identity": 15,
+        "labels": [
+            "Password"
+        ],
+        "properties": "dj2!h",
+        "elementId": "15"
+    },
+
+    {
+        "identity": 16,
+        "labels": [
+            "Password"
+        ],
+        "properties": "123456",
+        "elementId": "16"
+    },
+
+    {
+        "identity": 17,
+        "labels": [
+            "Password"
+        ],
+        "properties":"Pass",
+        "elementId": "17"
+    },
+
+    {
+        "identity": 18,
+        "labels": [
+            "Password"
+        ],
+        "properties": "word1234",
+        "elementId": "18"
+    },
+
+    {
+        "identity": 19,
+        "labels": [
+            "Password"
+        ],
+        "properties": "1234word",
+        "elementId": "19"
+    }
+]
+}
+
