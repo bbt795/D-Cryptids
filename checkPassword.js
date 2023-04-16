@@ -1,8 +1,41 @@
+//for the database
+function compare(input){
+fetch("editedDB.json")
+.then(response => response.json())
+.then(data => {
+  console.log(data.db)
+  let x=0;
+   
+  for (let i=0; i<6; i++) {
+    const passParam = data.db[i].properties;
+    console.log(data.db[i].properties);
 
+    const inputText = JSON.stringify(input);
+    const passText = JSON.stringify(passParam);
+
+    if(inputText == passText) {
+        console.log("true");
+        x++;
+    }
+  }
+
+  //checks for a match
+  if(x>0) {
+    document.getElementById("comparison").innerText += '\nYour password is a commonly used password!';
+  }
+  else {
+    document.getElementById("comparison").innerText = '';
+  }
+
+})
+}
+
+
+
+//for password strength checker
 function printStrongNess(input_string) {
     const n = input_string.length;
     // Checking lower alphabet in string
-	document.getElementById("response").innerText = ' ';
     let hasLower = false;
     let hasUpper = false;
     let hasDigit = false;
@@ -37,7 +70,7 @@ function printStrongNess(input_string) {
         strength = "Moderate";
     }
     
-    document.getElementById("responsehead").innerText = 'Strength of password: ' + strength;
+    document.getElementById("response").innerText = 'Strength of password: ' + strength;
     
       //Ways to improve password
       if(!hasLower || !hasUpper || !hasDigit || !specialChar || !passLength){
@@ -58,7 +91,7 @@ function printStrongNess(input_string) {
         }
       }
       
-    }
+}
     
     // adding more characters to suggest
     // strong password
@@ -148,7 +181,7 @@ function printStrongNess(input_string) {
         if ((l + u + d + s + r) == 5) {
             return ""; //no suggestions if strong password
         } else {
-        document.getElementById("suggestedhead").innerText += 'Suggested passwords:';
+        document.getElementById("response").innerText += '\n\nSuggested passwords:';
         }
         // Generate some 10 random suggestions which are strong
         for (let i = 0; i < 10; i++) {
@@ -157,23 +190,28 @@ function printStrongNess(input_string) {
             if (need > 0) {
                 suggest = add_more_char(suggest, need);
             }
-        document.getElementById("suggested").innerText += suggest + '\n';
+        document.getElementById("response").innerText += '\n' + suggest;
         }
     }
     
-    function onClick()
-    {
-      const input_String = document.getElementById("password").value;
-      printStrongNess(input_String);
-      generate_password(input_String.length, input_String); 
-      document.getElementById("password").value = "";
-    }
+function onClick() {
+    const input_String = document.getElementById("password").value;
+    printStrongNess(input_String);
+    generate_password(input_String.length, input_String); 
+    document.getElementById("password").value = "";
+    compare(input_String);
+}
+
+
+
+
 
 
 //for the password manager page
 function onClick2() {
     const input_String = "password123";
     printStrongNess(input_String);
+    //compare(input_String);
 }
 
 function onClick3() {
