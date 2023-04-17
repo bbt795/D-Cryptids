@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 1.5 rem;
+
+  background: center/70% url("img/background.png") fixed;
+  background-repeat: repeat-x ;
+  color: white;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+/*for login page*/
+#passChecker {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+#passHeader {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white; 
+}
+
+
+#main-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  
+}
+
+#login-header {
+  color: white; 
+}
+
+#login-error-msg-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#login-error-msg {
+  width: 23%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #e58f8f;
+  opacity: 0;
+}
+
+#error-msg-second-line {
+  display: block;
+}
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/*for security questions page*/
+.inputText {
+  width:300px;
+  height:30px;
+  border:none;
+  border-radius: 2px;
+  padding-left: 8px;
+}
+
+#submitQues {
+  width:300px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 7px;
+  color: black;
+
+}
+
+
+/*For the password manager page*/
+
+.passAccount1 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+.passAccount2 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+.passAccount3 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+.passAccount4 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: white;
+}
+
+#passResponse {
+  display: grid;
+  position: fixed;
+  bottom: 8;
+  right: 0;
+  width: 350px;
+  padding: 10px;
+  border: 5px solid rgb(37, 87, 41);
+  margin: 40;
+  color: white;
+
+}
+
+.logo {
+
+  width: 300px;
+  padding-right: 15px;
+
+}
+
+#comparison{
+
+  justify-items: center;
+  align-items: center;
+  color: white;
+
+}
