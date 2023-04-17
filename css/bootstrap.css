@@ -4739,8 +4739,8 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  /*border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;*/
 }
 
 .card > hr {
