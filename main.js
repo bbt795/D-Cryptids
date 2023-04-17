@@ -1,5 +1,4 @@
 const { app, BrowserWindow, ipcMain} = require('electron')
-//import { add_more_char, suggester, generate_password } from './checkPassword.js';
 
 const createWindow = () => {
   const win = new BrowserWindow({
