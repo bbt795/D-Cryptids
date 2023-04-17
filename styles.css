@@ -8,7 +8,7 @@
 body {
   padding: 1.5 rem;
 
-  background: center/70% url("img/background.png") fixed;
+  background: center/70% url("background.png") fixed;
   background-repeat: repeat-x ;
   color: white;
 }
